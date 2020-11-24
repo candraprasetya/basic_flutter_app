@@ -1,7 +1,8 @@
 //import package
-import 'package:basic_flutter/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+
+import 'screen/login_screen.dart';
 
 //main function
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Basic Flutter',
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'package:basic_flutter/screen/about_screen.dart';
+import 'package:basic_flutter/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 
 //Widget Screen
@@ -21,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         width: sizeWidth,
         height: sizeHeight,
-        color: Colors.teal,
         child: Column(
           children: [
             //Container warna Kuning
@@ -77,7 +78,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
-            )
+            ),
+            Container(
+                child: CustomButton(
+              text: 'Click Saya',
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AboutScreen(),
+                    ));
+              },
+            ))
           ],
         ),
       ),
