@@ -1,6 +1,7 @@
 import 'package:basic_flutter/screen/about_screen.dart';
 import 'package:basic_flutter/widget/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 //Widget Screen
 class HomeScreen extends StatefulWidget {
@@ -32,16 +33,16 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 //vertikal krena column
                 children: [
-                  Text('Basic Text'),
+                  Text('Email'),
                   Text(
-                    'Basic Text With Style',
+                    Get.arguments[0],
                     style: TextStyle(
                         fontSize: 20,
                         color: Colors.lightBlue,
                         fontStyle: FontStyle.italic),
                   ),
                   Text(
-                    'Basic Text With Style Bold',
+                    Get.arguments[1],
                     style: TextStyle(
                         fontSize: 20,
                         color: Colors.lightBlue,
@@ -83,11 +84,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: CustomButton(
               text: 'Click Saya',
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AboutScreen(),
-                    ));
+                Get.to(AboutScreen());
+
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) => AboutScreen(),
+                //     ));
               },
             ))
           ],
